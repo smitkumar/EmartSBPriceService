@@ -24,11 +24,6 @@ public class ProductPriceController {
 	public CouchBaseServiceManager couchDataManagerService;
 */
 	
-	@RequestMapping("/")
-	String sayHello(){
-		
-		return "hello Spring Boot !!!!!";
-	}	
 	
 	@RequestMapping("/list")
 	List<ProductPrice> getPriceList(){
