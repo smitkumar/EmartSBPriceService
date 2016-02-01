@@ -1,5 +1,6 @@
 package com.smit.emart.emartpriceservice;
 
+
 import java.util.Arrays;
 
 import org.springframework.boot.SpringApplication;
@@ -15,6 +16,7 @@ public class App
 {
     public static void main( String[] args )
     {
+
     	 ApplicationContext ctx = SpringApplication.run(ProductPriceController.class, args);
          
       
@@ -31,5 +33,8 @@ public class App
          }
          System.out.println("******************** Server Started **********************************");
    
+
+        System.out.println( "Hello World!" );
+
     }
 }
