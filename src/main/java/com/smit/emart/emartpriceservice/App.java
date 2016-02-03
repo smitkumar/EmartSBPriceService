@@ -4,23 +4,27 @@ package com.smit.emart.emartpriceservice;
 import java.util.Arrays;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 //import com.smit.springboot.Application;
 
 /**
- * Hello world!
+ * SpringBoot Application
  *
  */
+
+@SpringBootApplication
 public class App 
 {
     public static void main( String[] args )
     {
 
-    	 ApplicationContext ctx = SpringApplication.run(ProductPriceController.class, args);
+    	// ApplicationContext ctx = SpringApplication.run(App.class, args);
+    	SpringApplication.run(App.class, args);
          
       
-    	 System.out.println("***************************************************************");	 
+    	/* System.out.println("***************************************************************");	 
     	 
     	 System.out.println("Let's inspect the beans provided by Spring Boot:");
     	 
@@ -33,7 +37,7 @@ public class App
          }
          System.out.println("******************** Server Started **********************************");
    
-
+*/
         System.out.println( "Hello World!" );
 
     }

@@ -49,9 +49,14 @@ public class CouchBaseServiceManager {
 		return true;
 	}
 	
+	/*
+	 * retrive price list from the couchbase database
+	 * 
+	 * */
+	
 	
 	public Map<String,String> gePricetListing(String productName){
-		// Connect to localhost
+		     // Connect to localhost
 				Cluster cluster = CouchbaseCluster.create();				
 				System.out.println("connected to localhost");
 
