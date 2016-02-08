@@ -15,7 +15,7 @@ import com.smit.emart.bussiness.service.ProductService;
 
 
 @RestController
-@RequestMapping("/api/v1/prices")
+@RequestMapping("/api/v1/product")
 @EnableAutoConfiguration
 public class ProductPriceController {
 	
@@ -36,6 +36,20 @@ public class ProductPriceController {
 		log.info("Request URI reached to fetchProductPrice");
 		System.out.println("itemID");
 		return ProductService.getProductPriceById(bucket, itemID);
+    }
+	
+	@RequestMapping(value="/price/{name}", method=RequestMethod.GET)
+    public Object fetchProductPriceByName(@PathVariable("name") String name) {
+		log.info("Request URI reached to fetchProductPrice");
+		System.out.println("product name :"+name);
+		return ProductService.getProductPriceByName(bucket, name);
+    }
+	
+	@RequestMapping(value="/pricebyname/{name}", method=RequestMethod.GET)
+    public Object fetchAllProductPrice(@PathVariable("name") String name) {
+		log.info("Request URI reached to fetchProductPrice");
+		System.out.println("product name :"+name);
+		return ProductService.findAll(bucket, name);
     }
 	
 	
